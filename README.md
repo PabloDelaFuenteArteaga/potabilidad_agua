@@ -3,6 +3,25 @@ Este proyecto analiza el dataset Water Potability con el objetivo de determinar 
 
 El trabajo incluye preprocesado, análisis exploratorio y construcción de modelos predictivos, siguiendo un pipeline completo de Data Science.
 
+
+## Contexto
+El acceso a agua potable es un problema crítico a nivel global. Este proyecto muestra cómo técnicas de **Data Science** puede contribuir a:
+* Evaluar la calidad del agua.
+* Automatizar diagnósticos.
+* Apoyar decisiones fundamentales en salud pública.
+
+
+## Dataset
+* **Nombre:** Water Potability
+* **Número de observaciones:** 3276
+* **Número de variables:** 10
+* **Variable objetivo:** Potability (0 = No potable, 1 = Potable)
+
+El dataset recoge características químicas del agua que influyen directamente en su calidad y consumo humano.
+
+**Nota:** El dataset está incluido en este repositorio (`water_potability.csv`) para garantizar la reproducibilidad del proyecto.
+
+
 ## Objetivos del proyecto
 Construir un modelo capaz de predecir la potabilidad del agua a partir de variables químicas como:
 
@@ -20,15 +39,6 @@ El objetivo no es maximizar la precisión global (accuracy), sino identificar co
 
 Por ello, se pone especial énfasis en el **recall de la clase "no potable"**, asegurando que el agua contaminada sea detectada de la forma más fiable posible, incluso a costa de aumentar el número de falsos positivos. Este enfoque prioriza la seguridad frente a métricas generales como el accuracy.
 
-## Dataset
-* **Nombre:** Water Potability
-* **Número de observaciones:** 3276
-* **Número de variables:** 10
-* **Variable objetivo:** Potability (0 = No potable, 1 = Potable)
-
-El dataset recoge características químicas del agua que influyen directamente en su calidad y consumo humano.
-
-**Nota:** El dataset está incluido en este repositorio (`water_potability.csv`) para garantizar la reproducibilidad del proyecto.
 
 ## Preprocesado de los datos
 * Estudio de valores faltantes (NA's).
@@ -41,6 +51,7 @@ El dataset recoge características químicas del agua que influyen directamente 
 * División del dataset en los subconjuntos de train y test.
 * Selección de variables.
 
+
 ## Modelado
 Se aplican diversos modelos de Machine Learning para clasificar la potabilidad del agua, en concreto se usan:
 * Regresión logística sin transformación.
@@ -52,6 +63,7 @@ Se aplican diversos modelos de Machine Learning para clasificar la potabilidad d
 * Gradient Boosting.
 * XGBoost.
 
+
 ## Métricas de evaluación
 Se han utilizado las siguientes métricas:
 
@@ -60,6 +72,7 @@ Se han utilizado las siguientes métricas:
 * Recall
 * F1-score
 * ROC-AUC
+
 
 ## Resultados
 En comparación con un modelo base aleatorio (AUC ≈ 0.5), las regresiones logísticas no muestran capacidad predictiva real, ya que se mantienen en valores cercanos al azar. Los modelos basados en árboles mejoran claramente este baseline:
@@ -84,8 +97,9 @@ Dado que el objetivo del problema es evitar falsos negativos (clasificar agua no
 * Scikit-learn
 * Jupyter Notebook
 
-## Estructura del proyecto
 
+## Estructura del proyecto
+```
 potabilidad_agua/
 │
 ├── README.md
@@ -105,15 +119,10 @@ potabilidad_agua/
 ├── results/
 │   ├── comparacion_modelos.png
 │   └── resultados_numericos.jpg
+```
 
-## Contexto
-El acceso a agua potable es un problema crítico a nivel global. Este proyecto muestra cómo técnicas de **Data Science** puede contribuir a:
-* Evaluar la calidad del agua.
-* Automatizar diagnósticos.
-* Apoyar decisiones fundamentales en salud pública.
 
 ## Reproducibilidad
-
 El proyecto es completamente reproducible:
 
 1. Clonar el repositorio
@@ -121,6 +130,7 @@ El proyecto es completamente reproducible:
 3. Ejecutar el notebook
 
 El dataset está incluido en `data/`.
+
 
 ## Autor
 **Pablo De la Fuente Arteaga**
